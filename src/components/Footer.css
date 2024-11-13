@@ -1,0 +1,21 @@
+.footer {
+    background-color: #FCD068;
+    bottom: 0px;
+    display:flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.footer-ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: bottom;
+}
+
+#logo {
+height: 80px;
+padding: 10px;
+}
