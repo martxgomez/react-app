@@ -1,0 +1,24 @@
+#sidebar {
+    border-right: 2px solid #573A29;
+    height:100%;
+    width: 250px;
+    flex: 1;
+}
+
+.sidebar-ul {
+    padding: 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    li {
+        font-size: 1.5em;
+        border-bottom: 1px solid #573A29;
+        padding: 20px 20px 5px 20px;
+        width: 100%;
+        text-align: center;
+
+    }
+}
