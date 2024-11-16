@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import RecipeList from './components/Recipes/RecipeList';
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
         <>
             <Navbar />
             <body>
-                Blabla
+              <RecipeList /> 
             </body>
             <Footer />
         </>
