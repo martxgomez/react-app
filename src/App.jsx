@@ -13,6 +13,7 @@ function App() {
               <RecipeList /> 
             </body>
             <Sidebar />
+        
             <Footer />
         </>
         );
