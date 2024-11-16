@@ -3,14 +3,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
+import DashboardPage from "./pages/DashboardPage";
 
 function App() {
   return (
     <>
       <Navbar />
       <body>
-        <Dashboard />
+        <DashboardPage />
       </body>
       <Sidebar />
 

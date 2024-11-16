@@ -1,6 +1,6 @@
 import RecipeList from "../components/Recipes/RecipeList";
 
-function Dashboard() {
+function DashboardPage() {
   return (
     <>
       <RecipeList />
@@ -8,4 +8,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default DashboardPage;
