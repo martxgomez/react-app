@@ -1,14 +1,11 @@
-import "./Dashboard.css"
-import RecipeList from "../components"
+import RecipeList from "../components/Recipes/RecipeList";
 
-
-function Dashboard(){
-
-    return(
-        <>
-    <RecipeList/>
+function Dashboard() {
+  return (
+    <>
+      <RecipeList />
     </>
-    )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
