@@ -2,10 +2,15 @@ import "./RecipeCard.css";
 
 function RecipeCard(props) {
   const {
-    eachRecipe: {name, calories, image, servings},
+    recipe: {name, calories, image, servings, id},
   } = props;
 
+/* function deleteRecipe (recipeId) {
+  const filteredRecipes = 
+} */
+
   return (
+    <>
     <li className="card">
       <button className="close">✖️</button>
       <h3>{name}</h3>
@@ -13,6 +18,8 @@ function RecipeCard(props) {
       <img src={image} alt="recipe image" />
       <p>Servings: {servings}</p>
     </li>
+    <button onClick = {() => props.deleteRecipe(id)}>Delete</button>
+    </>
   );
 }
 
