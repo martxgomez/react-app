@@ -13,14 +13,11 @@ function RecipeDetailsPage() {
   const { name, calories, image, servings } = recipeInfo;
   return (
     <div className="recipe-detail-page">
-      <h2>Recipe Details Page</h2>
+      <h2>Recipe Details</h2>
       <h3>{name}</h3>
-      <p>{calories}</p>
+      <p>Calories: {calories}</p>
       <img src={image} alt="recipe image" />
-      <p>{servings}</p>
-
-      {/* me he quedado aqui, he modificado app y recipeCard */}
-
+      <p>Servings: {servings}</p>
       <div></div>
       <Link to="/" className="close">
         Back
