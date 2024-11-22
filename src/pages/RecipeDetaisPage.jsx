@@ -1,28 +1,31 @@
 //data
-import recipesData from "../data/recipes.json"
+import recipesData from "../data/recipes.json";
 
 //hooks
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-function RecipeDetailsPage(){
+function RecipeDetailsPage() {
+  //encontrar la receta actual por el id
+  const { recipeId } = useParams();
+  const recipeInfo = recipesData.find((recipe) => recipe.id === recipeId);
 
-    //encontrar la receta actual por el id
-    const {recipeId}=useParams()
-    const recipeInfo = recipesData.find((recipe) => recipe.id === recipeId);
+  const { name, calories, image, servings } = recipeInfo;
+  return (
+    <div className="recipe-detail-page">
+      <h2>Recipe Details Page</h2>
+      <h3>{name}</h3>
+      <p>{calories}</p>
+      <img src={image} alt="recipe image" />
+      <p>{servings}</p>
 
-    return(
-        <div className="recipe-detail-page">
-            <h1>Recipe Details Page</h1>
-       {/* me he quedado aqui, he modificado app y recipeCard */}
+      {/* me he quedado aqui, he modificado app y recipeCard */}
 
-        <div>
-            {recipeInfo}
-        </div>
-        <Link to= "/" className= "close">
-              Back
-            </Link>
-        </div>
-    )
+      <div></div>
+      <Link to="/" className="close">
+        Back
+      </Link>
+    </div>
+  );
 }
-export default RecipeDetailsPage
+export default RecipeDetailsPage;

@@ -1,32 +1,27 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
+//components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import Sidebar from "./components/Sidebar";
+
+//routes
 import DashboardPage from "./pages/DashboardPage";
-import RecipeCard from "./components/Recipes/RecipeCard";
-
-import recipesData from "./data/recipes.json"
-
-import { useState } from "react";
+import RecipeDetailsPage from "./pages/RecipeDetaisPage"
 
 function App() {
-  const [recipes, setRecipes]=useState(recipesData)
   return (
-    <>
+    <div>
       <Navbar />
-      <body>
-        <DashboardPage />
-      </body>
       <Sidebar />
-      {recipes &&
-        recipes.map((recipe) => {
-          return (
-              <RecipeCard key={recipe.id} {...recipe} />
-          );
-        })}
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/recipes/:recipeId" element={<RecipeDetailsPage />} />
+      </Routes>
+
       <Footer />
-    </>
+    </div>
   );
 }
 
