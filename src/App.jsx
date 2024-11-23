@@ -1,5 +1,8 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import './App.css';
+
+import {Routes, Route} from 'react-router-dom';
+import AboutPage from './components/AboutPage';
+import NotFoundPage from './components/NotFoundPage';
 
 //components
 import Navbar from "./components/Navbar";
@@ -18,11 +21,14 @@ function App() {
       <Routes>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/recipes/:recipeId" element={<RecipeDetailsPage />} />
+        <Route path="/about" element={<AboutPage />}/>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
       <Footer />
     </div>
   );
+  
 }
 
 export default App;

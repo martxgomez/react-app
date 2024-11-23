@@ -1,7 +1,8 @@
 import "./RecipeCard.css";
 import { Link } from "react-router-dom";
 
-function RecipeCard({ id, name, calories, image, servings }) {
+function RecipeCard({ id, name, calories, image, servings, deleteRecipe }) {
+
   return (
     <Link to={`/recipes/${id}`} className="recipe-card">
       <li className="card">
@@ -11,8 +12,9 @@ function RecipeCard({ id, name, calories, image, servings }) {
         <img src={image} alt="recipe image" />
         <p>Servings: {servings}</p>
       </li>
+      <button onClick = {() => deleteRecipe(id)}>Delete</button>
     </Link>
-  );
+    )
 }
 
 export default RecipeCard;
