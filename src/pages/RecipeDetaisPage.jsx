@@ -16,7 +16,7 @@ function RecipeDetailsPage() {
       <h2>Recipe Details</h2>
       <h3>{name}</h3>
       <p>Calories: {calories}</p>
-      <img src={image} alt="recipe image" />
+      <img width="300" src={image} alt="recipe image" />
       <p>Servings: {servings}</p>
       <div></div>
       <Link to="/" className="close">
