@@ -1,28 +1,35 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import RecipeList from './components/Recipes/RecipeList';
-import Sidebar from './components/Sidebar';
-import {Routes, Route} from 'react-router-dom';
-import AboutPage from './components/AboutPage';
-import NotFoundPage from './components/NotFoundPage';
+//style
+import "./App.css";
 
+//react
+import { Routes, Route } from "react-router-dom";
+
+//components
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+
+//routes
+import DashboardPage from "./pages/DashboardPage";
+import RecipeDetailsPage from "./pages/RecipeDetaisPage";
+import AboutPage from "./components/AboutPage";
+import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
-    return (
-        <>
-            <Navbar />
-            <body>
-              <RecipeList /> 
-            </body>
-            <Sidebar />
-            <Footer />
-            <Routes>
-              <Route path="/about" element={<AboutPage />}/>
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-        </>
-        );
+  return (
+    <div>
+      <Navbar />
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/recipes/:recipeId" element={<RecipeDetailsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

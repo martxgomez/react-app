@@ -16,7 +16,7 @@ function RecipeList() {
     <>
     <div className="recipe-container">
       {recipes.map((recipe, index) => {
-        return <RecipeCard key={index} recipe={recipe} deleteRecipe = {deleteRecipe} />;
+        return <RecipeCard key={index} {...recipe} deleteRecipe = {deleteRecipe} />;
         
       })}
     </div>
