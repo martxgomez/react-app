@@ -14,6 +14,7 @@ import DashboardPage from "./pages/DashboardPage";
 import RecipeDetailsPage from "./pages/RecipeDetaisPage";
 import AboutPage from "./components/AboutPage";
 import NotFoundPage from "./components/NotFoundPage";
+import Form from "./components/Recipes/Form";
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path="/" element={<DashboardPage />} />
-        <Route path="/recipes/:recipeId" element={<RecipeDetailsPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/form" element={<Form/>} />
+        <Route path="/recipes/:recipeId" element={<RecipeDetailsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
