@@ -7,6 +7,9 @@ function RecipeCard({ id, name, calories, image, servings, deleteRecipe }) {
       <button onClick={() => deleteRecipe(id)} className="close">
         ✖️
       </button>
+      <button <Link to="/update">Update</NavLink>onClick={() => deleteRecipe(id)} className="close">
+      ✍️
+      
       <Link to={`/recipes/${id}`} className="recipe-card">
         <li className="card">
           <h3>{name}</h3>
