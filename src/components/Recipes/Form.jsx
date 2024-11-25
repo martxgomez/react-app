@@ -6,6 +6,7 @@ function Form({ recipes, setRecipes }) {
   const [calories, setCalories] = useState(0);
   const [image, setImage] = useState("");
   const [servings, setServings] = useState(0);
+  const [description, setDescription] = useState("");
 
   //creamos una función para crear un nuevo id
   function createRandomId() {
@@ -24,6 +25,7 @@ function Form({ recipes, setRecipes }) {
       calories,
       image,
       servings,
+      description
     };
 
     //añadimos la nueva receta al array anterior
@@ -65,6 +67,13 @@ function Form({ recipes, setRecipes }) {
         type="number"
         onChange={(e) => setServings(e.target.value)}
         value={servings}
+      />
+      <label htmlFor="description">Description:</label>
+      <textarea
+        id="description"
+        type="text"
+        onChange={(e) => setDescription(e.target.value)}
+        value={description}
       />
       <button type="submit">Add Recipe</button>
     </form>

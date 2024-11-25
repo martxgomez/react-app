@@ -8,7 +8,7 @@ function RecipeDetailsPage({recipes}) {
   const { recipeId } = useParams();
   const recipeInfo = recipes.find((recipe) => recipe.id === recipeId);
 
-  const { name, calories, image, servings } = recipeInfo;
+  const { name, calories, image, servings, description } = recipeInfo;
   return (
     <div className="recipe-detail-page">
       <h2>Recipe Details</h2>
@@ -16,6 +16,7 @@ function RecipeDetailsPage({recipes}) {
       <p>Calories: {calories}</p>
       <img width="300" src={image} alt="recipe image" />
       <p>Servings: {servings}</p>
+      <p>Description: {description}</p>
       <div></div>
       <Link to="/" className="close">
         Back

@@ -10,7 +10,7 @@ function RecipeCard({ id, name, calories, image, servings, deleteRecipe }) {
       <Link to={`/recipes/${id}`} className="recipe-card">
         <li className="card">
           <h3>{name}</h3>
-          <p>Calories: {calories > 150 ? "👎🏻" : "👍🏻"}</p>
+          <p>Calories: {calories} kcal {calories > 150 ? "👎🏻" : "👍🏻"}</p>
           <img width="300" src={image} alt="recipe image" />
           <p>Servings: {servings}</p>
         </li>
