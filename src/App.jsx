@@ -32,8 +32,9 @@ function App() {
   }
 
   return (
-    <div>
+    <div >
       <Navbar />
+      <body>
       <Sidebar />
       <Routes>
         <Route path="/" element={<DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} />}  />
@@ -46,6 +47,8 @@ function App() {
         />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      </body>
+      
 
       <Footer />
     </div>

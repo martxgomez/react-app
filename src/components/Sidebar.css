@@ -1,29 +1,32 @@
 #sidebar {
-    border-right: 2px solid #573A29;
-    height:100%;
-    width: 250px;
-    flex: 1;
+  border: orange solid;
+  height: 100%;
+  width: 200px;
+  background-color: #fcd068;
+  color: white;
 }
 
 .sidebar-ul {
-    padding: 30px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    li {
-        font-size: 1.5em;
-        border-bottom: 1px solid #573A29;
-        padding: 20px 20px 5px 20px;
-        width: 100%;
-        text-align: center;
+  padding: 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 
+  li {
+    font-size: 1.5em;
+
+    padding: 20px 20px 5px 20px;
+    width: 100%;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: white;
     }
-}
-
-.active {
-    text-decoration: underline;
-    color: red
   }
+  .active {
+    color: #573a29;
+  }
+}

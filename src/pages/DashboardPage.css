@@ -1,0 +1,6 @@
+.dashboard-container{
+    border: red solid;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}

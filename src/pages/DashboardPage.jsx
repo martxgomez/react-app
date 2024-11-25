@@ -1,4 +1,5 @@
 import RecipeList from "../components/Recipes/RecipeList";
+import "./DashboardPage.css"
 
 function DashboardPage({recipes, deleteRecipe}) {
   console.log(recipes)
