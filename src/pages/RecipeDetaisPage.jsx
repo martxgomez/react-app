@@ -1,14 +1,12 @@
-//data
-import recipesData from "../data/recipes.json";
 
 //hooks
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-function RecipeDetailsPage() {
+function RecipeDetailsPage({recipes}) {
   //encontrar la receta actual por el id
   const { recipeId } = useParams();
-  const recipeInfo = recipesData.find((recipe) => recipe.id === recipeId);
+  const recipeInfo = recipes.find((recipe) => recipe.id === recipeId);
 
   const { name, calories, image, servings } = recipeInfo;
   return (

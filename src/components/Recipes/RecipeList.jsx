@@ -1,22 +1,17 @@
-import recipesArray from "../../data/recipes.json"
+
 import RecipeCard from "./RecipeCard";
 import "./RecipeList.css"
-import { useState } from "react";
 
-function RecipeList() {
-  const [recipes, setRecipes] = useState(recipesArray);
-  console.log(recipesArray);
-  function deleteRecipe(recipeId) {
-    const filteredRecipes = recipes.filter (recipe => {
-      return recipe.id !==recipeId;
-    });
-    setRecipes(filteredRecipes);
-  }
+function RecipeList({recipes, deleteRecipe}) {
+
+  // console.log(recipes)
+  
+
   return (
     <>
     <div className="recipe-container">
-      {recipes.map((recipe, index) => {
-        return <RecipeCard key={index} {...recipe} deleteRecipe = {deleteRecipe} />;
+      {recipes.map((recipes, index) => {
+        return <RecipeCard key={index}  deleteRecipe = {deleteRecipe} {...recipes}/>;
         
       })}
     </div>

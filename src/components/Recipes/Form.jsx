@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-function Form(props) {
+function Form({ recipes, setRecipes }) {
   //creamos constantes de estado para añadir cada prop
-  const [name, setName] = useState();
-  const [calories, setCalories] = useState();
-  const [image, setImage] = useState();
-  const [servings, setServings] = useState();
+  const [name, setName] = useState("");
+  const [calories, setCalories] = useState(0);
+  const [image, setImage] = useState("");
+  const [servings, setServings] = useState(0);
 
   //creamos una función para crear un nuevo id
   function createRandomId() {
@@ -27,7 +27,9 @@ function Form(props) {
     };
 
     //añadimos la nueva receta al array anterior
-    props.setRecipes([...props.tasks, newRecipe]);
+    setRecipes([...recipes, newRecipe]);
+  
+    
   }
 
   return (
@@ -47,7 +49,7 @@ function Form(props) {
         id="calories"
         onChange={(e) => setCalories(e.target.value)}
         value={calories}
-        type="text"
+        type="number"
       />
 
       <label htmlFor="image">Image:</label>
@@ -62,7 +64,7 @@ function Form(props) {
         id="servings"
         type="number"
         onChange={(e) => setServings(e.target.value)}
-        value={image}
+        value={servings}
       />
       <button type="submit">Add Recipe</button>
     </form>

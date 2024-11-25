@@ -1,6 +1,9 @@
 //style
 import "./App.css";
 
+//data
+import recipesArray from "./data/recipes.json"
+
 //react
 import { Routes, Route } from "react-router-dom";
 
@@ -15,17 +18,32 @@ import RecipeDetailsPage from "./pages/RecipeDetaisPage";
 import AboutPage from "./components/AboutPage";
 import NotFoundPage from "./components/NotFoundPage";
 import Form from "./components/Recipes/Form";
+import { useState } from "react";
 
 function App() {
+  const [recipes, setRecipes] = useState(recipesArray);
+
+
+  function deleteRecipe(recipeId) {
+    const filteredRecipes = recipes.filter (recipe => {
+      return recipe.id !==recipeId;
+    });
+    setRecipes(filteredRecipes);
+  }
+
   return (
     <div>
       <Navbar />
       <Sidebar />
       <Routes>
-        <Route path="/" element={<DashboardPage />} />
+        <Route path="/" element={<DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} />}  />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/form" element={<Form/>} />
-        <Route path="/recipes/:recipeId" element={<RecipeDetailsPage />} />
+        <Route path="/form" element={<Form recipes={recipes} setRecipes={setRecipes} />} />
+        <Route
+          path="/recipes/:recipeId"
+          element={<RecipeDetailsPage recipes={recipes}/>}
+    
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
