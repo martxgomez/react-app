@@ -1,30 +1,37 @@
 import { useState } from "react";
-import {Link, useParams} from "react-router-dom";
-function UpdateForm() {
+import {useParams} from "react-router-dom";
 
-    //creamos los campos del form
-    const [name, setName] = useState("");
-    const [calories, setCalories] = useState(0);
-    const [image, setImage] = useState("");
-    const [servings, setServings] = useState(0);
-    const [description, setDescription] = useState("");
+function UpdateForm({recipes, setRecipes, updateRecipe}) {
 
-    //creamos la función para añadir una nueva receta
-    function handleSubmit(event) {
-    event.preventDefault();
+const {recipeId} = useParams();
+const recipeToUpdate = recipes.find((recipe) => recipe.id ===recipeId);
 
 
-     }
+const [formFields, setFormFields] = useState({
+  name: recipeToUpdate.name,
+  calories: recipeToUpdate.calories,
+  image: recipeToUpdate.image,
+  servings: recipeToUpdate.servings,
+  description: recipeToUpdate.description,
+})
+
+     const handleSubmit = (event) => {
+      event.preventDefault();
+      updateRecipe({...formFields, id: recipeToUpdate.id});
+     }; 
 
     return (
         <>
  <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
       <input
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-        value={name}
+      value={formFields.name}
+
+        onChange={(e) => 
+          setFormFields({
+            ...formFields, name: e.target.value
+        })}
+        
         id="name"
         type="text"
       />
@@ -32,8 +39,11 @@ function UpdateForm() {
       <label htmlFor="calories">Calories:</label>
       <input
         id="calories"
-        onChange={(e) => setCalories(e.target.value)}
-        value={calories}
+        onChange={(e) => 
+          setFormFields({
+            ...formFields, calories: e.target.value
+        })}
+        value={formFields.calories}
         type="number"
       />
 
@@ -41,24 +51,33 @@ function UpdateForm() {
       <input
         id="image"
         type="url"
-        onChange={(e) => setImage(e.target.value)}
-        value={image}
+        onChange={(e) => 
+          setFormFields({
+            ...formFields, image: e.target.value
+        })}
+        value={formFields.image}
       />
       <label htmlFor="servings">Servings:</label>
       <input
         id="servings"
         type="number"
-        onChange={(e) => setServings(e.target.value)}
-        value={servings}
+        onChange={(e) => 
+          setFormFields({
+            ...formFields, servings: e.target.value
+        })}
+        value={formFields.servings}
       />
       <label htmlFor="description">Description:</label>
       <textarea
         id="description"
         type="text"
-        onChange={(e) => setDescription(e.target.value)}
-        value={description}
+        onChange={(e) => 
+          setFormFields({
+            ...formFields, description: e.target.value
+        })}
+        value={formFields.description}
       />
-      <button type="submit">Update</button>
+      <button type="submit">Update Recipe</button>
     </form>
         </>
     )

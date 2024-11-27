@@ -32,6 +32,10 @@ function App() {
     setRecipes(filteredRecipes);
   }
 
+  function updateRecipe (updatedRecipe) {
+    setRecipes((prevRecipes) => prevRecipes.map((recipe)=> recipe.id === updatedRecipe.id ? {...recipe, ...updatedRecipe}: recipe) )
+  }
+
   return (
     <div>
       <Navbar />
@@ -40,7 +44,7 @@ function App() {
         <Route path="/" element={<DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} />}  />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/form" element={<Form recipes={recipes} setRecipes={setRecipes} />} />
-        <Route path="/update" element={<UpdateForm recipes={recipes} setRecipes={setRecipes} />} />
+        <Route path="/update/:recipeId" element={<UpdateForm recipes={recipes} setRecipes={setRecipes} updateRecipe={updateRecipe} />} />
         <Route
           path="/recipes/:recipeId"
           element={<RecipeDetailsPage recipes={recipes}/>}
