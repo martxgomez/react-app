@@ -1,9 +1,8 @@
 #sidebar {
-  border: orange solid;
-  height: 100%;
-  width: 200px;
-  background-color: #fcd068;
-  color: white;
+  height: auto;
+  width: auto;
+  color: #6a0606;
+  background-color: #f8f4f1;
 }
 
 .sidebar-ul {
@@ -11,22 +10,27 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+   text-decoration: none;
+   margin: 20px;
+   font-family: "Outfit", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
 
   li {
     font-size: 1.5em;
-
     padding: 20px 20px 5px 20px;
     width: 100%;
-    text-align: center;
+   
+  
+
+
     a {
       text-decoration: none;
-      color: white;
+      color: #ff3d09;
     }
   }
   .active {
-    color: #573a29;
+    color: #6a0606;
   }
 }

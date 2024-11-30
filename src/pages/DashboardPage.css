@@ -1,6 +1,23 @@
-.dashboard-container{
-    border: red solid;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+.dashboard-container {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  text-align: center;
+
 }
+h2 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+font-size: 1.7em;
+
+
+  margin: 30px auto;
+  color: #ff3d09;
+}
+

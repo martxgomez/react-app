@@ -1,17 +1,27 @@
-.navbar{
-    width: 100%;
-    background-color: #FCD068;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.navbar {
+  width: 100%;
+  background-image: url("../assets/background-image.jpeg");
+  background-position: center center;
+  background-size: auto;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+
+  font-size: 2em;
+  color: #ff3d09;
+  text-align: center;
+
+ 
 }
 
-.logo{
-    height: 70px;
-    position:absolute;
+.logo {
+  height: 70px;
+  position: absolute;
 }
-
-
-
