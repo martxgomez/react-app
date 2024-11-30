@@ -17,9 +17,9 @@ import Sidebar from "./components/Sidebar";
 import DashboardPage from "./pages/DashboardPage";
 import RecipeDetailsPage from "./pages/RecipeDetailsPage";
 import AboutPage from "./components/AboutPage";
-import NotFoundPage from "./components/NotFoundPage";
-import Form from "./components/Recipes/Form";
-import UpdateForm from "./components/Recipes/UpdateForm";
+import NotFoundPage from "./pages/NotFoundPage";
+import Form from "./pages/Form";
+import UpdateForm from "./pages/UpdateForm";
 
 function App() {
   const [recipes, setRecipes] = useState(recipesArray);
