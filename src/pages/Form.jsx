@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import "./Form.css";
 
 function Form({ recipes, setRecipes }) {
@@ -8,6 +9,9 @@ function Form({ recipes, setRecipes }) {
   const [image, setImage] = useState("");
   const [servings, setServings] = useState(0);
   const [description, setDescription] = useState("");
+
+  //creamos el hook para redirigir
+  const navigate = useNavigate()
 
   //creamos una función para crear un nuevo id
   function createRandomId() {
@@ -31,6 +35,9 @@ function Form({ recipes, setRecipes }) {
 
     //añadimos la nueva receta al array anterior
     setRecipes([...recipes, newRecipe]);
+    
+    //redirigimos a la página principal cuando le demos al submit
+    navigate("/");
   }
 
   return (
