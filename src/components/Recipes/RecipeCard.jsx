@@ -17,7 +17,7 @@ function RecipeCard({ id, name, calories, image, servings, deleteRecipe }) {
           <div className="card-image">
             <img src={image} alt={`${name}`} />
           </div>
-          <div className="card-content">
+          <div className="card-container">
             <h3 className="card-title">{name}</h3>
             <p className="card-servings">Servings: {servings}</p>
             <p className="card-calories">
