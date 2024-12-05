@@ -1,0 +1,51 @@
+.aboutpage {
+    display:flex;
+    flex-direction: column;
+    .coworkers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 15px;
+    }
+    .coworker {
+        margin: 20px;
+    }
+}
+
+.introduction {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    .description {
+        margin: 50px 100px 0px 100px;
+        font-size: 20px;
+    }
+
+}
+
+.facePicture { 
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animazione al passaggio del mouse */
+    }
+      
+    .facePicture:hover {
+    transform: scale(1.1);
+    
+}
+.coworkerTitle {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .coworkerDescription{
+        width:100%;
+    }
+
+    
+}
