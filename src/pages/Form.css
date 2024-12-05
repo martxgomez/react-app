@@ -1,0 +1,54 @@
+form {
+  width: 80%;
+  min-height: 700px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.inputs-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto 300px;
+  border: 2px #ff3d09 solid;
+  background-color: #f8f4f1;
+  padding: 50px 70px 70px 70px;
+}
+
+label {
+  color: #181717;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 15px auto 5px 0;
+}
+input,textarea{
+    font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #333;
+
+}
+textarea{
+    min-height: 150px;
+}
+
+.submit-btn{
+    border: 2px #ff3d09 solid;
+    height: 50px;
+    border-radius: 20px;
+    margin: 20px 100px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    background-color: white;
+}
+.submit-btn:hover {
+    background-color: #ff4c4c;
+    color: #fff;
+    transform: scale(1.1);
+  }

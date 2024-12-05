@@ -1,9 +1,9 @@
-
 //hooks
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import "./RecipeDetailsPage.css"
 
-function RecipeDetailsPage({recipes}) {
+function RecipeDetailsPage({ recipes }) {
   //encontrar la receta actual por el id
   const { recipeId } = useParams();
   const recipeInfo = recipes.find((recipe) => recipe.id === recipeId);
@@ -12,15 +12,26 @@ function RecipeDetailsPage({recipes}) {
   return (
     <div className="recipe-detail-page">
       <h2>Recipe Details</h2>
-      <h3>{name}</h3>
-      <p>Calories: {calories}</p>
-      <img width="300" src={image} alt="recipe image" />
-      <p>Servings: {servings}</p>
-      <p>Description: {description}</p>
-      <div></div>
-      <Link to="/" className="close">
-        Back
-      </Link>
+      <div className="detail-container">
+        <img width="300" src={image} alt="recipe image" />
+
+        <div className="info-container">
+          <h3>{name}</h3>
+          <h4>Calories </h4>
+          <p>{calories}</p>
+
+          <h4>Servings </h4>
+          <p>{servings}</p>
+
+          <h4>Description </h4>
+          <p>{description}</p>
+        
+        </div>
+        
+      </div>
+      <Link to="/" className="back-btn">
+            Back
+          </Link>
     </div>
   );
 }

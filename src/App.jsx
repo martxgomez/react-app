@@ -2,7 +2,7 @@
 import "./App.css";
 
 //data
-import recipesArray from "./data/recipes.json"
+import recipesArray from "./data/recipes.json";
 
 //react
 import { Routes, Route } from "react-router-dom";
@@ -17,44 +17,64 @@ import Sidebar from "./components/Sidebar";
 import DashboardPage from "./pages/DashboardPage";
 import RecipeDetailsPage from "./pages/RecipeDetailsPage";
 import AboutPage from "./components/AboutPage";
-import NotFoundPage from "./components/NotFoundPage";
-import Form from "./components/Recipes/Form";
-import UpdateForm from "./components/Recipes/UpdateForm";
+import NotFoundPage from "./pages/NotFoundPage";
+import Form from "./pages/Form";
+import UpdateForm from "./pages/UpdateForm";
 
 function App() {
   const [recipes, setRecipes] = useState(recipesArray);
 
-
   function deleteRecipe(recipeId) {
-    const filteredRecipes = recipes.filter (recipe => {
-      return recipe.id !==recipeId;
+    const filteredRecipes = recipes.filter((recipe) => {
+      return recipe.id !== recipeId;
     });
     setRecipes(filteredRecipes);
   }
 
-  function updateRecipe (updatedRecipe) {
-    setRecipes((prevRecipes) => prevRecipes.map((recipe)=> recipe.id === updatedRecipe.id ? {...recipe, ...updatedRecipe}: recipe) )
+  function updateRecipe(updatedRecipe) {
+    setRecipes((prevRecipes) =>
+      prevRecipes.map((recipe) =>
+        recipe.id === updatedRecipe.id
+          ? { ...recipe, ...updatedRecipe }
+          : recipe
+      )
+    );
   }
 
   return (
-    <div >
+    <div>
       <Navbar />
-      <body>
-      <Sidebar />
-      <Routes>
-        <Route path="/" element={<DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} />}  />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/form" element={<Form recipes={recipes} setRecipes={setRecipes} />} />
-        <Route path="/update/:recipeId" element={<UpdateForm recipes={recipes} setRecipes={setRecipes} updateRecipe={updateRecipe} />} />
-        <Route
-          path="/recipes/:recipeId"
-          element={<RecipeDetailsPage recipes={recipes}/>}
-    
-        />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      </body>
-      
+      <section>
+        <Sidebar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} />
+            }
+          />
+          <Route path="/about" element={<AboutPage />} />
+          <Route
+            path="/form"
+            element={<Form recipes={recipes} setRecipes={setRecipes} />}
+          />
+          <Route
+            path="/update/:recipeId"
+            element={
+              <UpdateForm
+                recipes={recipes}
+                setRecipes={setRecipes}
+                updateRecipe={updateRecipe}
+              />
+            }
+          />
+          <Route
+            path="/recipes/:recipeId"
+            element={<RecipeDetailsPage recipes={recipes} />}
+          />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </section>
 
       <Footer />
     </div>

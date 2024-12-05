@@ -1,23 +1,22 @@
 .footer {
-    background-color: #FCD068;
-    width: 100%;
-    bottom: 0;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto; /* el footer se va al fondo si hay poco contenido*/
-    
+  background-color: #6a0606;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto; /* el footer se va al fondo si hay poco contenido*/
 }
 
 .footer-ul {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
 }
 
 #logo {
-height: 80px;
-padding: 10px;
+  height: 80px;
+  padding: 10px;
 }
