@@ -1,51 +1,83 @@
 .aboutpage {
-    display:flex;
-    flex-direction: column;
-    .coworkers {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 15px;
-    }
-    .coworker {
-        margin: 20px;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  min-height: 700px;
 }
 
 .introduction {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-    .description {
-        margin: 50px 100px 0px 100px;
-        font-size: 20px;
-    }
+  display: flex;
+  flex-direction: column;
+  height: auto;
 
+  align-content: center;
+  margin: 50px;
+  h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
 }
 
-.facePicture { 
-    width: 100px; 
-    height: 100px;
-    border-radius: 50%;
-    border: 1px solid grey;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Animazione al passaggio del mouse */
-    }
-      
-    .facePicture:hover {
-    transform: scale(1.1);
-    
+.coworkers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin: 20px 50px 30px 50px;
+  gap: 80px;
 }
-.coworkerTitle {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    .coworkerDescription{
-        width:100%;
-    }
-
+.coworker {
     
+  width: 450px;
+  height: auto;
+  justify-content: center;
+  border: 2px solid #ff3d09;
+  background-color: #f8f4f1;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  h2{
+    margin-left: 50px;
+  }
+  p{
+    text-align: justify ;
+    padding: 5px 35px;
+  }
+
+ 
+}
+.coworkerTitle{
+    height: auto;
+    padding: 20px;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+
+.facePicture {
+  width: 100px;
+  height: 100px;
+ margin-left: 50px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Animazione al passaggio del mouse */
+}
+
+.facePicture:hover {
+  transform: scale(1.1);
+}
+
+p {
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0;
+}
+.last-p{
+    margin-bottom: 35px;
 }
