@@ -16,7 +16,7 @@ import Sidebar from "./components/Sidebar";
 //routes
 import DashboardPage from "./pages/DashboardPage";
 import RecipeDetailsPage from "./pages/RecipeDetailsPage";
-import AboutPage from "./components/AboutPage";
+import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Form from "./pages/Form";
 import UpdateForm from "./pages/UpdateForm";
