@@ -8,7 +8,7 @@ function AboutPage () {
         <section className = "introduction"> 
         <h1> More about us</h1>
         <p className="description"> <p> Welcome to our Recipe App! This project was created with love and teamwork to bring a simple and interactive way to explore, add, and manage your favorite recipes. </p>
-        Whether you're looking to discover new culinary inspirations or organize your own recipes, our app is here to make it easy and fun.
+        Whether you are looking to discover new culinary inspirations or organize your own recipes, our app is here to make it easy and fun.
 
 Developed using React, this project is a collaboration between two passionate developers who share a love for coding and cooking. We hope you enjoy using our app as much as we enjoyed building it!</p>
         </section>
@@ -35,7 +35,7 @@ Developed using React, this project is a collaboration between two passionate de
 
             Hace un par de años, Andrea decidió mudarse a España, donde encontró una nueva fuente de inspiración en la vibrante cultura culinaria del país. Ha dedicado su tiempo a fusionar las tradiciones italianas con ingredientes y técnicas españolas, creando platos únicos que cuentan una historia de raíces y viajes.
 
-            Cuando no está en la cocina probando nuevas recetas, Andrea disfruta compartir su pasión en talleres y cenas con amigos, siempre acompañado de un buen vino que combine con su último experimento culinario. Su lema: 'La cocina es el lugar donde el norte y el sur se encuentran, y donde Italia y España se abrazan.' </p>
+            Cuando no está en la cocina probando nuevas recetas, Andrea disfruta compartir su pasión en talleres y cenas con amigos, siempre acompañado de un buen vino que combine con su último experimento culinario. Su lema: La cocina es el lugar donde el norte y el sur se encuentran, y donde Italia y España se abrazan. </p>
         </div>
         </div>
 
