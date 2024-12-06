@@ -1,13 +1,23 @@
-.dashboard-container {
+.dashboard-container-on {
   width: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
   text-align: center;
 
 }
+.dashboard-container-off {
+  position:relative;
+  width: auto;
+  transform: translateX(-115px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
 h2 {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;

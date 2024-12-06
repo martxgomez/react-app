@@ -4,15 +4,15 @@
   flex-direction: column;
   width: auto;
   min-height: 700px;
-  transition: left 0.3s ease-in-out;
+
 }
 .aboutpage-off{
   position:relative;
-  
   width: auto;
-  transition: left 0.3s ease-in-out;
   transform: translateX(-115px);
- 
+  display: flex;
+  flex-direction: column;
+  transition-delay: 0.2s; 
 }
 
 .introduction {

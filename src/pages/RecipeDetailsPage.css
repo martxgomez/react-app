@@ -1,7 +1,15 @@
-.recipe-detail-page {
+.recipe-detail-page-on{
   display: flex;
   flex-direction: column;
   min-height: 650px;
+}
+.recipe-detail-page-off {
+  display: flex;
+  flex-direction: column;
+  min-height: 650px;
+  position:relative;
+  width: auto;
+  transform: translateX(-115px);
 }
 
 .detail-container {
