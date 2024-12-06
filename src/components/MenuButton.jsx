@@ -1,9 +1,9 @@
 
 import "./MenuButton.css";
 
-function MenuButton() {
+function MenuButton({onClick}) {
     
-  return <button className="menu-btn"></button>;
+  return <button className="menu-btn" onClick={onClick}></button>;
 }
 
 export default MenuButton;

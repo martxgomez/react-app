@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import "./Form.css";
 
-function Form({ recipes, setRecipes }) {
+function Form({ recipes, setRecipes, isOn}) {
   //creamos constantes de estado para añadir cada prop
   const [name, setName] = useState("");
   const [calories, setCalories] = useState(0);
@@ -42,7 +42,7 @@ function Form({ recipes, setRecipes }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="form-container">
+      <div className={isOn?"form-container-on":"form-container-off"}>
         <h2>Add a recipe</h2>
         <div className="inputs-container">
           {" "}

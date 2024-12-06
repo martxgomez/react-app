@@ -1,9 +1,11 @@
-#sidebar {
+/* #sidebar {
   height: auto;
   width: 250px;
   color: #6a0606;
   background-color: #f8f4f1;
-}
+  left: 0;
+  transition: left 2s ease-in-out;
+} */
 
 .sidebar-ul {
   padding: 30px;
@@ -21,9 +23,6 @@
     font-size: 1.5em;
     padding: 20px 20px 10px 20px;
     width: 100%;
-   
-  
-
 
     a {
       text-decoration: none;
@@ -33,4 +32,29 @@
   .active {
     color: #6a0606;
   }
+}
+.sidebar-ul li a:hover {
+  color: #6a0606; 
+}
+.sidebar-on {
+  height: auto;
+  width: 250px;
+  color: #6a0606;
+  background-color: #f8f4f1;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+  position: relative;
+ 
+left:0;
+}
+.sidebar-off {
+  height: auto;
+  width: 250px;
+  color: #6a0606;
+  background-color: #f8f4f1;
+  position: relative;
+
+  left:-250px;
+  transition: left 0.3s ease-in-out;
+
 }

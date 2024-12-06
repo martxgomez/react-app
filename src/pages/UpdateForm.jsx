@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-function UpdateForm({ recipes, setRecipes, updateRecipe }) {
+function UpdateForm({ recipes, updateRecipe, isOn}) {
   const { recipeId } = useParams();
   const recipeToUpdate = recipes.find((recipe) => recipe.id === recipeId);
 
@@ -21,7 +21,7 @@ function UpdateForm({ recipes, setRecipes, updateRecipe }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="form-container">
+      <div className={isOn?"form-container-on":"form-container-off"}>
           <h2>Update the recipe</h2>
           <div className="inputs-container">
             <label htmlFor="name">Name:</label>

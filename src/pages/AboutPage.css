@@ -1,14 +1,26 @@
-.aboutpage {
+.aboutpage-on {
+  
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: auto;
   min-height: 700px;
+
+}
+.aboutpage-off{
+  position:relative;
+  width: auto;
+  transform: translateX(-115px);
+  display: flex;
+  flex-direction: column;
+  transition-delay: 0.2s; 
 }
 
 .introduction {
+
   display: flex;
   flex-direction: column;
   height: auto;
+  width: auto;
 
   align-content: center;
   margin: 50px;
@@ -19,12 +31,13 @@
 }
 
 .coworkers {
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   height: auto;
-  width: 100%;
+  width: auto;
   margin: 20px 50px 30px 50px;
   gap: 80px;
 }

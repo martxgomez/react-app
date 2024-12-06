@@ -41,22 +41,30 @@ function App() {
     );
   }
 
+  //App.jsx RENDERS THE SIDEBAR, WE CREATE BELOW THE STATE AND THE FUNCTION TO CONTROL THE SIDEBAR (VISIBLE OR NOT) - lines 45-49 + lines 53 and 55
+  const [sidebarOn, setSidebarOn] = useState(false);
+
+  const toggleSidebar=()=> {
+    console.log("Toggling sidebar");
+    setSidebarOn(!sidebarOn);
+  }
+
   return (
     <div>
-      <Navbar />
+      <Navbar onClick={toggleSidebar}/> {/* toggleSidebar added  */}
       <section>
-        <Sidebar />
+        <Sidebar isOn={sidebarOn}/> {/* added sidebarOn */}
         <Routes>
           <Route
             path="/"
             element={
-              <DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} />
+              <DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} isOn={sidebarOn} />
             }
           />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<AboutPage  isOn={sidebarOn}/> }  />
           <Route
             path="/form"
-            element={<Form recipes={recipes} setRecipes={setRecipes} />}
+            element={<Form recipes={recipes} setRecipes={setRecipes} isOn={sidebarOn}/>}
           />
           <Route
             path="/update/:recipeId"
@@ -65,14 +73,15 @@ function App() {
                 recipes={recipes}
                 setRecipes={setRecipes}
                 updateRecipe={updateRecipe}
+                isOn={sidebarOn}
               />
             }
           />
           <Route
             path="/recipes/:recipeId"
-            element={<RecipeDetailsPage recipes={recipes} />}
+            element={<RecipeDetailsPage recipes={recipes} isOn={sidebarOn}/>}
           />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage isOn={sidebarOn}/>} />
         </Routes>
       </section>
 

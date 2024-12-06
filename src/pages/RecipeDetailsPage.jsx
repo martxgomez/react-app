@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./RecipeDetailsPage.css"
 
-function RecipeDetailsPage({ recipes }) {
+function RecipeDetailsPage({ recipes, isOn}) {
   //encontrar la receta actual por el id
   const { recipeId } = useParams();
   const recipeInfo = recipes.find((recipe) => recipe.id === recipeId);
 
   const { name, calories, image, servings, description } = recipeInfo;
   return (
-    <div className="recipe-detail-page">
+    <div className={isOn?"recipe-detail-page-on":"recipe-detail-page-off"}>
       <h2>Recipe Details</h2>
       <div className="detail-container">
         <img width="300" src={image} alt="recipe image" />

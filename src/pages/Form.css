@@ -2,10 +2,18 @@ form {
   width: 80%;
   min-height: 700px;
 }
-.form-container {
+.form-container-on{
   display: flex;
   flex-direction: column;
   padding: 30px;
+}
+.form-container-off{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  position:relative;
+  width: auto;
+  transform: translateX(-115px);
 }
 .inputs-container {
   position: relative;
