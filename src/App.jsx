@@ -41,11 +41,19 @@ function App() {
     );
   }
 
+  //App.jsx RENDERS THE SIDEBAR, WE CREATE BELOW THE STATE AND THE FUNCTION TO CONTROL THE SIDEBAR (VISIBLE OR NOT) - lines 45-49 + lines 53 and 55
+  const [sidebarOn, setSidebarOn] = useState(false);
+
+  const toggleSidebar=()=> {
+    console.log("Toggling sidebar");
+    setSidebarOn(!sidebarOn);
+  }
+
   return (
     <div>
-      <Navbar />
+      <Navbar onClick={toggleSidebar}/> {/* toggleSidebar added  */}
       <section>
-        <Sidebar />
+        <Sidebar isOn={sidebarOn}/> {/* added sidebarOn */}
         <Routes>
           <Route
             path="/"

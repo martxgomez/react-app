@@ -9,4 +9,8 @@
     border: none;
     position: absolute;
     left: 50px;
+    cursor:pointer;  /* when we go with the cursor on the button, a "hand" appears, showing the button is clickable */
+}
+.menu-btn:hover{
+    opacity: 0.5;  /* when we go with the cursor on the button, the button is clearer */
 }

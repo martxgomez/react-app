@@ -1,9 +1,10 @@
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({isOn}) {
+  console.log(isOn);
   return (
-    <section id="sidebar">
+    <section id="sidebar" className={isOn ? "sidebar-on" : "sidebar-off"}>
       <ul className="sidebar-ul">
         <li>
           <NavLink to="/">Recipes</NavLink>
