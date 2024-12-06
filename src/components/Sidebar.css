@@ -1,11 +1,11 @@
-#sidebar {
+/* #sidebar {
   height: auto;
   width: 250px;
   color: #6a0606;
   background-color: #f8f4f1;
   left: 0;
   transition: left 2s ease-in-out;
-}
+} */
 
 .sidebar-ul {
   padding: 30px;
@@ -37,8 +37,24 @@
   color: #6a0606; 
 }
 .sidebar-on {
-  transform: translateX(0);
+  height: auto;
+  width: 250px;
+  color: #6a0606;
+  background-color: #f8f4f1;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+  position: relative;
+ 
+left:0;
 }
 .sidebar-off {
-  transform: translateX(-250px);
+  height: auto;
+  width: 250px;
+  color: #6a0606;
+  background-color: #f8f4f1;
+  position: relative;
+
+  left:-250px;
+  transition: left 0.3s ease-in-out;
+
 }

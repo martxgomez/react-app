@@ -58,13 +58,13 @@ function App() {
           <Route
             path="/"
             element={
-              <DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} />
+              <DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} isOn={sidebarOn} />
             }
           />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<AboutPage /> }  isOn={sidebarOn}/>
           <Route
             path="/form"
-            element={<Form recipes={recipes} setRecipes={setRecipes} />}
+            element={<Form recipes={recipes} setRecipes={setRecipes} isOn={sidebarOn}/>}
           />
           <Route
             path="/update/:recipeId"
@@ -73,14 +73,15 @@ function App() {
                 recipes={recipes}
                 setRecipes={setRecipes}
                 updateRecipe={updateRecipe}
+                isOn={sidebarOn}
               />
             }
           />
           <Route
             path="/recipes/:recipeId"
-            element={<RecipeDetailsPage recipes={recipes} />}
+            element={<RecipeDetailsPage recipes={recipes} isOn={sidebarOn}/>}
           />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} isOn={sidebarOn}/>
         </Routes>
       </section>
 

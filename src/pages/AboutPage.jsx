@@ -2,9 +2,9 @@ import Andrea from "../assets/Andrea.png";
 import Marta from "../assets/Marta.png";
 import "./AboutPage.css";
 
-function AboutPage() {
+function AboutPage({isOn}) {
   return (
-    <div className="aboutpage">
+    <div  className={isOn ? "aboutpage-on" : "aboutpage-off"}>
       <section className="introduction">
         <h2> More about us</h2>
         <h4>Welcome to our Recipe App!</h4>
