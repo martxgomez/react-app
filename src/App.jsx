@@ -61,7 +61,7 @@ function App() {
               <DashboardPage recipes={recipes} deleteRecipe={deleteRecipe} isOn={sidebarOn} />
             }
           />
-          <Route path="/about" element={<AboutPage /> }  isOn={sidebarOn}/>
+          <Route path="/about" element={<AboutPage  isOn={sidebarOn}/> }  />
           <Route
             path="/form"
             element={<Form recipes={recipes} setRecipes={setRecipes} isOn={sidebarOn}/>}
@@ -81,7 +81,7 @@ function App() {
             path="/recipes/:recipeId"
             element={<RecipeDetailsPage recipes={recipes} isOn={sidebarOn}/>}
           />
-          <Route path="*" element={<NotFoundPage />} isOn={sidebarOn}/>
+          <Route path="*" element={<NotFoundPage isOn={sidebarOn}/>} />
         </Routes>
       </section>
 

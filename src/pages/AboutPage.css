@@ -1,9 +1,18 @@
-.aboutpage {
+.aboutpage-on {
   
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: auto;
   min-height: 700px;
+  transition: left 0.3s ease-in-out;
+}
+.aboutpage-off{
+  position:relative;
+  
+  width: auto;
+  transition: left 0.3s ease-in-out;
+  transform: translateX(-115px);
+ 
 }
 
 .introduction {
