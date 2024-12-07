@@ -5,12 +5,12 @@
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  min-height: 520px;
+  min-height: 600px;
   margin-bottom: 50px;
-
+  top:0px;
 }
 .dashboard-container-off {
-  position:relative;
+  position: relative;
   width: 100%;
   transform: translateX(-115px);
   display: flex;
@@ -18,12 +18,12 @@
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-   min-height: 520px;
-   margin-bottom: 50px;
+  min-height: 600px;
+  margin-bottom: 50px;
+  top:0px;
 }
-.title-container{
+.title-container {
   width: 100%;
-  
 }
 
 h2 {
@@ -31,11 +31,7 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-
-font-size: 1.7em;
-
-
+  font-size: 1.7em;
   margin: 30px auto;
   color: #ff3d09;
 }
-
