@@ -1,8 +1,9 @@
 .page-error-on{
-height: 100%;
+
 width: 100%;
 display: flex;
 flex-direction: row;
+min-height: 600px;
     
     img{
         width: 500px;
@@ -11,7 +12,7 @@ flex-direction: row;
    
 }
 .page-error-off{
-    height: 100%;
+    min-height: 600px;
     width: 100%;
     display: flex;
     flex-direction: row;
